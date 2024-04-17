@@ -1,6 +1,8 @@
 ﻿#include "SpectrumDataServer.h"
 #include "ui_SpectrumDataServer.h"
 
+#include "SettingsForm.h"
+
 #pragma execution_character_set("utf-8")
 
 SpectrumDataServer::SpectrumDataServer(QWidget *parent)
@@ -36,6 +38,8 @@ void SpectrumDataServer::InitConnect()
 {
     connect(ui->btn_listen, &QPushButton::clicked, this, &SpectrumDataServer::SlotClickedListenButton);
     connect(server, &MyTcpServer::SignalReceNewConnect, ui->textEdit, &QTextEdit::append);
+    connect(ui->btn_settings, &QPushButton::clicked, this, &SpectrumDataServer::SlotClickedSettingsButton);
+    connect(&SettingsForm::GetInstance(this), &SettingsForm::SignalParameterChange, server, &MyTcpServer::SlotParameterChange);
 }
 
 void SpectrumDataServer::SlotClickedListenButton(bool checked)
@@ -55,5 +59,10 @@ void SpectrumDataServer::SlotClickedListenButton(bool checked)
         server->close();
         ui->textEdit->append("disconnect");
     }
+}
+
+void SpectrumDataServer::SlotClickedSettingsButton()
+{
+    SettingsForm::GetInstance(this).show();
 }
 

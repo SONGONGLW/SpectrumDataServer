@@ -6,6 +6,7 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 #include "CreateDataThread.h"
+#include "ParameterSettingDataClass.h"
 
 class MyTcpServer : public QTcpServer {
     Q_OBJECT
@@ -22,6 +23,9 @@ signals:
 private slots:
     void readData();
     void handleResults(const QByteArray &packet);
+
+public slots:
+    void SlotParameterChange(const ParameterSettingDataClass &data);
 
 private:
     CreateDataThread *dataThread_ = nullptr;

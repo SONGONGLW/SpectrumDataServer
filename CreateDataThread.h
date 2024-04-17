@@ -3,6 +3,7 @@
 
 #include <QThread>
 #include <QTcpSocket>
+#include "ParameterSettingDataClass.h"
 
 class CreateDataThread : public QThread
 {
@@ -12,6 +13,7 @@ public:
 
     void generate_fourier_data(QString &data, int num_samples);
     void PackData(QByteArray &packet);
+    void SetChangeParameter(const ParameterSettingDataClass &data);
 
 signals:
       void SignalResultReady(const QByteArray &packet);
@@ -22,6 +24,8 @@ protected:
 
 
 private:
+    ParameterSettingDataClass data_;
+
 
 };
 

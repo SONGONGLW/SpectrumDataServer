@@ -17,16 +17,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     CreateDataThread.cpp \
+    ParameterSettingDataClass.cpp \
+    SettingsForm.cpp \
     TcpCommonClass.cpp \
     main.cpp \
     SpectrumDataServer.cpp
 
 HEADERS += \
     CreateDataThread.h \
+    ParameterSettingDataClass.h \
+    SettingsForm.h \
     SpectrumDataServer.h \
     TcpCommonClass.h
 
 FORMS += \
+    SettingsForm.ui \
     SpectrumDataServer.ui
 
 

@@ -23,6 +23,7 @@ private:
 
 private slots:
     void SlotClickedListenButton(bool checked = false);
+    void SlotClickedSettingsButton();
 
 private:
     Ui::SpectrumDataServer *ui;

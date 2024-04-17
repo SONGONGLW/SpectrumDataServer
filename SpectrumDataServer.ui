@@ -57,7 +57,20 @@ font-size:20px;</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="4" rowspan="2">
+      <item row="2" column="0" colspan="6">
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+      <item row="0" column="2" rowspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font-size:20px;</string>
+        </property>
+        <property name="text">
+         <string>端口号</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5" rowspan="2">
        <widget class="QPushButton" name="btn_listen">
         <property name="styleSheet">
          <string notr="true">color: rgb(0, 85, 255);
@@ -72,19 +85,6 @@ font-size:20px;</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="5">
-       <widget class="QTextEdit" name="textEdit"/>
-      </item>
-      <item row="0" column="2" rowspan="2">
-       <widget class="QLabel" name="label_2">
-        <property name="styleSheet">
-         <string notr="true">font-size:20px;</string>
-        </property>
-        <property name="text">
-         <string>端口号</string>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0" rowspan="2">
        <widget class="QLabel" name="label">
         <property name="styleSheet">
@@ -92,6 +92,18 @@ font-size:20px;</string>
         </property>
         <property name="text">
          <string>IP地址</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4" rowspan="2">
+       <widget class="QPushButton" name="btn_settings">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 85, 255);
+height: 40px;
+font-size:20px;</string>
+        </property>
+        <property name="text">
+         <string>参数设置</string>
         </property>
        </widget>
       </item>

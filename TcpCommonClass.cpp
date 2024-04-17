@@ -71,3 +71,8 @@ void MyTcpServer::handleResults(const QByteArray &packet)
         }
     }
 }
+
+void MyTcpServer::SlotParameterChange(const ParameterSettingDataClass &data)
+{
+    dataThread_->SetChangeParameter(data);
+}
